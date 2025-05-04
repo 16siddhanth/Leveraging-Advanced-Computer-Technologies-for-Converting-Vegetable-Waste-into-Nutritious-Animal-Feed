@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Food Waste Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #333;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .section {
+      margin: 40px 0;
+    }
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+    .service-card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+    .service-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Food Waste Management System</h1>
+  </header>
+  <nav aria-label="Main Navigation">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('service') }}">Service</a>
+    <a href="{{ url_for('userpage') }}">User  Page</a>
+</nav>
+  
+  <div class="container">
+    <section class="section">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <img src="https://th.bing.com/th/id/OIP.vvtppqZ0-kP0wgkaATXnUQHaEs?w=285&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Organic Waste Recycling">
+          <h3>Organic Waste Recycling</h3>
+          <p>Organic waste recycling is the process of converting biodegradable materials, such as food scraps, yard waste, paper, and animal manure, into reusable resources. It plays a vital role in reducing the amount of waste sent to landfills, conserving resources, and minimizing environmental impact. The process begins with the segregation and collection of organic waste, ensuring it is free from contaminants like plastics and metals. This waste can then be recycled through methods such as composting, anaerobic digestion, or biorefining. Composting involves the decomposition of organic matter by microorganisms, producing nutrient-rich compost that enhances soil health. Anaerobic digestion, on the other hand, breaks down waste in the absence of oxygen, generating biogas for energy production and digestate, a valuable soil conditioner. Advanced methods like biorefining convert organic waste into biofuels, bioplastics, and bio-based chemicals.
+
+            The benefits of organic waste recycling are manifold. It enriches soil, reduces the need for synthetic fertilizers, and lowers greenhouse gas emissions by diverting waste from landfills. Additionally, it contributes to renewable energy production through biogas and supports a circular economy by turning waste into valuable resources. However, challenges like contamination, lack of collection infrastructure, and low public awareness can hinder its effectiveness. Innovations such as smart bins, waste-to-energy plants, and circular economy initiatives are helping to overcome these barriers. Overall, organic waste recycling is a sustainable and eco-friendly solution that promotes waste management, energy efficiency, and environmental conservation.</p>
+        </div>
+        <!-- Add more service cards as needed -->
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 Food Waste Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html>

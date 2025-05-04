@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page - Food Waste Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .button-link {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .button-link:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Page</h1>
+    <form action="{{ url_for('userpage') }}" method="POST">
+      <label for="organic_weight">Organic Waste (kg):</label>
+      <input type="number" id="organic_weight" name="organic_weight" placeholder="Enter organic waste" min="0" step="0.1" required>
+
+      <label for="nonorganic_weight">Non-Organic Waste (kg):</label>
+      <input type="number" id="nonorganic_weight" name="nonorganic_weight" placeholder="Enter non-organic waste" required>
+
+      <label for="temperature">Food Temperature (°C):</label>
+      <input type="number" id="temperature" name="temperature" placeholder="Enter temperature" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Show Data Button -->
+    <a href="{{ url_for('userdata') }}" class="button-link">Show Data</a>
+  </div>
+</body>
+</html>

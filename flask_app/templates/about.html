@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Food Waste Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header { 
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #333;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .section {
+      margin: 40px 0;
+    }
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .team-member {
+      text-align: center;
+      max-width: 200px;
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+    }
+    .team-member h3 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+    }
+    .team-member p {
+      font-size: 16px;
+      color: #777;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Food Waste Management System</h1>
+  </header>
+  <nav aria-label="Main Navigation">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('service') }}">Service</a>
+    <a href="{{ url_for('userpage') }}">User Page</a>
+  </nav>
+  
+  <div class="container">
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>Food waste recycling management using IoT (Internet of Things) and AI (Artificial Intelligence) technologies offers innovative solutions to address global food waste challenges. IoT devices like smart sensors and connected bins enable real-time tracking of food waste, measuring quantity, type, and decomposition progress in households, restaurants, and supply chains. AI analyzes this data to identify waste patterns, predict volumes, and recommend waste reduction strategies.</p>
+      <p>In recycling, IoT sensors monitor conditions like temperature and moisture during composting and anaerobic digestion, ensuring efficient decomposition and biogas production. AI algorithms adjust these processes dynamically to maximize outputs, such as nutrient-rich compost or renewable energy. Furthermore, AI-powered systems enhance waste segregation, automatically separating organic and non-organic materials. By integrating IoT and AI, food waste management becomes data-driven, automated, and sustainable, significantly reducing environmental impact and supporting global sustainability initiatives.</p>
+    </section>
+    
+    <section class="section">
+      <h2>Our Goal</h2>
+      <p>Our goal is to combat food waste by utilizing innovative technologies to automate waste segregation, classify waste, measure waste weight, and repurpose organic waste into fertilizers or animal feed. The mission of food waste recycling management using IoT and AI technologies is to revolutionize how food waste is monitored, reduced, and recycled by leveraging smart, data-driven solutions. It aims to minimize food waste at every stage—households, businesses, and supply chains—while maximizing resource recovery through efficient recycling processes.</p>
+      <p>By integrating IoT devices and AI, the goal is to promote sustainability, reduce environmental harm, and create a circular economy where food waste is transformed into valuable resources like compost, biogas, or bio-based products. Ultimately, the goal is to support global efforts toward zero waste, reduce greenhouse gas emissions, and ensure a sustainable future for communities and industries worldwide.</p>
+    </section>
+
+    <section class="section">
+      <h2>Our Team</h2>
+      <div class="team">
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='images/siddhanth.jpg') }}" alt="Siddhanth">
+          <h3>Siddhanth</h3>
+          <p>Project Manager & Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='images/ryan.jpg') }}" alt="Ryan">
+          <h3>Ryan</h3>
+          <p>Hardware & IoT Code Handling</p>
+        </div>
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='images/irbaz.jpg') }}" alt="Irbaz">
+          <h3>Irbaz</h3>
+          <p>AI & ML Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='images/krish.jpg') }}" alt="Krish">
+          <h3>Krish</h3>
+          <p>Backend Integration & Testing Lead</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Our Approach</h2>
+      <p>We adopt a technology-driven, data-centric approach to food waste recycling management by integrating IoT and AI solutions. Our strategy consists of the following key components:</p>
+      <ol>
+        <li><strong>Smart Waste Monitoring with IoT</strong>
+          <ul>
+            <li>IoT-enabled smart bins and sensors track waste generation in real time.</li>
+            <li>Sensors measure weight, moisture, temperature, and decomposition status.</li>
+            <li>Cloud-based platforms aggregate and analyze waste data for insights.</li>
+          </ul>
+        </li>
+        <li><strong>AI-Powered Waste Classification & Segregation</strong>
+          <ul>
+            <li>Machine learning models classify waste.</li>
+            <li>AI-driven automation ensures accurate sorting, reducing manual effort.</li>
+            <li>Image recognition techniques enhance waste identification efficiency.</li>
+          </ul>
+        </li>
+        <li><strong>Optimized Waste Reduction & Resource Recovery</strong>
+          <ul>
+            <li>AI predicts food waste patterns and provides actionable recommendations.</li>
+            <li>Businesses optimize inventory to prevent food surplus.</li>
+            <li>Organic waste is repurposed into compost, biogas, or animal feed.</li>
+          </ul>
+        </li>
+        <li><strong>Data-Driven Decision Making</strong>
+          <ul>
+            <li>AI analyzes historical data to provide predictive analytics for waste management.</li>
+            <li>IoT dashboards offer real-time insights to businesses, municipalities, and households.</li>
+            <li>Reports and alerts enable proactive waste management strategies.</li>
+          </ul>
+        </li>
+        <li><strong>Scalability & Integration</strong>
+          <ul>
+            <li>Our system integrates seamlessly with existing waste management infrastructure.</li>
+            <li>The solution is scalable for use in households, restaurants, supermarkets, and large supply chains.</li>
+            <li>Open APIs ensure compatibility with third-party sustainability platforms.</li>
+          </ul>
+        </li>
+      </ol>
+      <p>By implementing this approach, we create an intelligent, sustainable, and automated food waste management system that minimizes waste, maximizes resource recovery, and contributes to a greener future.</p>
+    </section>
+
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or would like to get involved, please reach out to us at 16siddhanth@gmail.com</a>.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Food Waste Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html>
